@@ -34,7 +34,7 @@ public class GameManger : MonoBehaviour
     float prob6;
 
     public Text bowlingText;
-
+    int temprun;
     void Start()
     {
         target = Random.Range(35, 71);
@@ -56,6 +56,7 @@ public class GameManger : MonoBehaviour
         var4.gameObject.SetActive(false);
         var5.gameObject.SetActive(false);
         var6.gameObject.SetActive(false);
+        
     }
 
     void Update()
@@ -71,7 +72,7 @@ public class GameManger : MonoBehaviour
 
     void bat()
     {
-
+        
     }
 
     public void onCLickSpin()
@@ -102,5 +103,49 @@ public class GameManger : MonoBehaviour
         var6.gameObject.SetActive(true);
     }
 
+    public void variation1()
+    {
+        if(isSpin)
+        {
+            prob0 = Random.Range(0.9f,1f);
+            prob1 = Random.Range(0.8f,0.86f);
+            prob2 = Random.Range(0.7f,0.8f);
+            prob4 = Random.Range(0.6f,0.7f);
+            prob6 = Random.Range(0.5f,0.65f);
+        }
+        else
+        {
+            prob0 = Random.Range(0.9f, 1f);
+            prob1 = Random.Range(0.8f, 0.86f);
+            prob2 = Random.Range(0.7f, 0.8f);
+            prob4 = Random.Range(0.5f, 0.6f);
+            prob6 = Random.Range(0.4f, 0.5f);
+        }
+    }
+
+    public void hit0()
+    {
+        temprun = 0;
+    }
+
+    public void hit1()
+    {
+        temprun = 1;
+    }
+
+    public void hit2()
+    {
+        temprun = 2;
+    }
+
+    public void hit4()
+    {
+        temprun = 4;
+    }
+
+    public void hit6()
+    {
+        temprun = 6;
+    }
 
 }
